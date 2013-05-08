@@ -27,6 +27,17 @@ function createAndLoginUserACS(last_name, first_name, email, password, password_
  */
 function loginUserACS(email, password)
 {
+	Ti.include('/ui/common/database/database.js');
+	Ti.include('/ui/common/database/users_db.js');
+	Ti.include('/ui/common/database/children_db.js');
+	Ti.include('/ui/common/database/relationships_db.js');
+	Ti.include('/ui/common/database/records_db.js');
+	Ti.include('/ui/common/database/incidents_db.js');
+	Ti.include('/ui/common/database/entries_db.js');
+	Ti.include('/ui/common/database/activities_db.js');
+	Ti.include('/ui/common/database/appointments_db.js');
+	Ti.include('/ui/common/database/treatments_db.js');
+	
 	Cloud.Users.login({
     login: email,
     password: password
